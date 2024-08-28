@@ -1,8 +1,11 @@
-import BasicLayout from './components/BasicLayout';
+import { Router } from './Router';
+import { RouterProvider } from "react-router-dom";
+
 
 function App() {
   return (
-    <BasicLayout />
+    <RouterProvider router={Router} />
+
   );
 }
 

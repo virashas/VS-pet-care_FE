@@ -7,7 +7,7 @@ import { Button } from 'antd';
 import './SearchBar.css'
 import { Col, Row } from 'antd';
 
-const { Header, Content } = Layout;
+const { Header } = Layout;
 
 const headerStyle: React.CSSProperties = {
     textAlign: 'center',
@@ -15,14 +15,6 @@ const headerStyle: React.CSSProperties = {
     height: 64,
     paddingInline: 48,
     lineHeight: '64px',
-    backgroundColor: '#ffffff',
-};
-
-const contentStyle: React.CSSProperties = {
-    textAlign: 'center',
-    minHeight: 120,
-    lineHeight: '120px',
-    color: '#fff',
     backgroundColor: '#ffffff',
 };
 
@@ -52,7 +44,6 @@ export default function SearchBar() {
                         </Col>
                     </Row>
                 </Header>
-                {/* <Content style={contentStyle}>Content</Content> */}
             </Layout>
         </Flex>
     </div>

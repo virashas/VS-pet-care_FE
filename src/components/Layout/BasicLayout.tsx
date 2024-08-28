@@ -9,6 +9,7 @@ import { BellOutlined,SettingOutlined } from '@ant-design/icons';
 import { Badge } from 'antd';
 import { Avatar } from 'antd';
 import SearchBar from './SearchBar';
+import { Outlet } from "react-router-dom";
 
 const { Header, Sider, Content } = Layout;
 
@@ -24,8 +25,8 @@ const contentStyle: React.CSSProperties = {
   textAlign: 'center',
   minHeight: 120,
   lineHeight: '120px',
-  color: '#fff',
-  backgroundColor: '#ffffff',
+  color: '#000',
+  backgroundColor: '#fff',
 };
 
 const siderStyle: React.CSSProperties = {
@@ -62,7 +63,9 @@ const items: MenuItem[] = [
   { key: '8', icon: <UserOutlined />, label: 'Employees' }
 ];
 
-const BasicLayout: React.FC = () => {
+const BasicLayout: React.FC<{
+  searchbar?: boolean;
+  }> = ({ searchbar = true }) => {
   const [collapsed, setCollapsed] = useState(false);
 
   const toggleCollapsed = () => {
@@ -112,8 +115,8 @@ const BasicLayout: React.FC = () => {
           </div>
         </Sider>
         <Content style={contentStyle}>
-          <SearchBar/>
-          hello
+          {searchbar&&<SearchBar/>}
+          <Outlet />
         </Content>
       </Layout>
     </Layout>
