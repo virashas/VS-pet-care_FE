@@ -13,10 +13,17 @@ import Inventory from "../components/Pages/Inventory";
 import Calendar from "../components/Pages/Calendar";
 import Employees from "../components/Pages/Employees";
 import SelectedEmployee from "../components/Pages/SelectedEmployee"
+import Login from "../components/Pages/Login";
 
   
   const routes = createRoutesFromElements(
     <Route path="/">
+      <Route
+            path="login"
+            element={
+                <Login />
+            }
+        />
       <Route element={<BasicLayout />}>
         <Route
             path="dashboard"
