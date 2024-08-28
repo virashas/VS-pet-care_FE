@@ -1,0 +1,36 @@
+.ant-btn-primary {
+    color: #94C973;
+    background: rgb(255, 255, 255);
+    /* border-color: #94C973; */
+    box-shadow: none;
+    margin-top: -200px;
+}
+.ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover {
+    color: #94c973;
+    background: #E9FFDC;
+
+}
+.ant-layout * {
+    text-align: left;
+}
+.ant-menu-light .ant-menu-item-selected, :where(.css-dev-only-do-not-override-1gwfwyx).ant-menu-light > .ant-menu .ant-menu-item-selected {
+    color: #00800091;
+}
+.ant-menu-light .ant-menu-submenu-selected > .ant-menu-submenu-title, :where(.css-dev-only-do-not-override-1gwfwyx).ant-menu-light > .ant-menu .ant-menu-submenu-selected > .ant-menu-submenu-title {
+    color: #00800091;
+}
+.ant-badge {
+    color: rgba(0, 0, 0, 0.432);
+}
+.anticon {
+    color: rgba(0, 0, 0, 0.432);
+}
+.ant-avatar {
+    background: #5e9b5e;
+}
+.BadgesCol{
+    text-align: right;
+}
+.ShopName{
+    margin-left: 25px;
+}

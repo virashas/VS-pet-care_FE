@@ -1,0 +1,60 @@
+import React from 'react'
+import { Flex, Layout, Tooltip } from 'antd';
+import { Input } from 'antd';
+import type { GetProps } from 'antd';
+import { PlusOutlined } from '@ant-design/icons';
+import { Button } from 'antd';
+import './SearchBar.css'
+import { Col, Row } from 'antd';
+
+const { Header, Content } = Layout;
+
+const headerStyle: React.CSSProperties = {
+    textAlign: 'center',
+    color: '#fff',
+    height: 64,
+    paddingInline: 48,
+    lineHeight: '64px',
+    backgroundColor: '#ffffff',
+};
+
+const contentStyle: React.CSSProperties = {
+    textAlign: 'center',
+    minHeight: 120,
+    lineHeight: '120px',
+    color: '#fff',
+    backgroundColor: '#ffffff',
+};
+
+type SearchProps = GetProps<typeof Input.Search>;
+
+const { Search } = Input;
+
+const onSearch: SearchProps['onSearch'] = (value, _e, info) => console.log(info?.source, value);
+
+
+export default function SearchBar() {
+  return (
+    <div>
+        <Flex gap="middle" wrap>
+            <Layout>
+                <Header style={headerStyle}>
+                    <Row>
+                        <Col span={8}>
+                        </Col>
+                        <Col span={8}>
+                            <Search placeholder="input search text" allowClear onSearch={onSearch} style={{ width: 300 , marginTop: 20 }} />
+                        </Col>
+                        <Col className='AddButtonCol' span={8}>
+                            <Tooltip title="search">
+                                <Button shape="circle" icon={<PlusOutlined />} />
+                            </Tooltip>
+                        </Col>
+                    </Row>
+                </Header>
+                {/* <Content style={contentStyle}>Content</Content> */}
+            </Layout>
+        </Flex>
+    </div>
+  )
+}

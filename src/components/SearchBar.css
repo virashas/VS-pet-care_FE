@@ -1,0 +1,16 @@
+.AddButtonCol{
+    text-align: right;
+}
+.anticon {
+    color: #00800091;
+}
+:where(.css-dev-only-do-not-override-1gwfwyx).ant-input-outlined:hover {
+    border-color: #94c973;
+    background-color: #ffffff;
+}
+:where(.css-dev-only-do-not-override-1gwfwyx).ant-btn-default {
+    background: #ffffff;
+    border-color: #94c973;
+    color: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 2px 0 rgba(121, 100, 100, 0.02);
+}
